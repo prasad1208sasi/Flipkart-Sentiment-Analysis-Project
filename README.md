@@ -101,7 +101,7 @@ streamlit run hello.py
 
 Open in browser:
 
-http://localhost:8501
+http://3.95.27.57:8501
 
 🌐 Deployment
 
