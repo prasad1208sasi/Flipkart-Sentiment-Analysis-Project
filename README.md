@@ -1,149 +1,120 @@
-# Flipkart-Sentiment-Analysis-Project
-Developed an end-to-end Flipkart Sentiment Analysis system using NLP and Machine Learning, deployed as a Streamlit web app on AWS EC2 for real-time review classification.
+# Flipkart Sentiment Analysis Project
 
-🛒 Flipkart Product Review Sentiment Analysis
-📌 Overview
+Developed an end-to-end Flipkart Sentiment Analysis system using Natural Language Processing and Machine Learning, deployed as a Streamlit web application on AWS EC2 for real-time review classification.
 
-This project is an end-to-end Sentiment Analysis system that classifies Flipkart product reviews as Positive or Negative using Natural Language Processing (NLP) and Machine Learning. The application is built with Streamlit for real-time predictions and uses TF-IDF + Logistic Regression for sentiment classification.
+## Overview
+
+This project is an end-to-end sentiment analysis application that classifies Flipkart product reviews as Positive or Negative using NLP and machine learning techniques. The system is built with Streamlit for real-time predictions and uses TF-IDF vectorization combined with Logistic Regression for sentiment classification.
 
 Users can enter any product review and instantly receive sentiment feedback through a web interface.
 
-🎯 Objective
+## Objective
 
-To analyze customer reviews and determine sentiment polarity (positive/negative) in order to understand customer satisfaction and identify potential pain points.
+To analyze customer reviews and determine sentiment polarity (positive or negative) in order to understand customer satisfaction and identify potential pain points.
 
-📂 Dataset
+## Dataset
 
-The dataset consists of Flipkart product reviews with fields such as:
+The dataset consists of Flipkart product reviews with the following fields:
 
-Review Text
-
-Rating
-
-Reviewer Details (optional)
+- Review Text  
+- Rating  
+- Reviewer Details (optional)
 
 Sentiment labeling logic:
 
-Rating ≥ 4 → Positive (1)
-
-Rating < 4 → Negative (0)
+- Rating ≥ 4 → Positive (1)  
+- Rating < 4 → Negative (0)  
 
 The application automatically detects review and rating columns from the dataset.
 
-🔄 Project Workflow
+## Project Workflow
 
-Load dataset using Pandas
+- Load dataset using Pandas  
+- Perform text preprocessing (lowercasing, removing special characters, stopword removal)  
+- Convert text into numerical features using TF-IDF Vectorization  
+- Split data into training and testing sets  
+- Train a Logistic Regression model  
+- Evaluate performance using F1 Score  
+- Save trained model and vectorizer using Joblib  
+- Build a Streamlit web interface for real-time predictions  
 
-Perform text preprocessing (lowercasing, removing special characters, stopwords removal)
+## Model and Techniques
 
-Convert text into numerical features using TF-IDF Vectorization
+- Text cleaning using Regular Expressions and NLTK  
+- Feature extraction using TF-IDF  
+- Machine Learning model: Logistic Regression  
+- Evaluation metric: F1 Score  
 
-Split data into training and testing sets
+## Tech Stack
 
-Train a Logistic Regression model
+- Python  
+- Pandas, NumPy  
+- Scikit-learn  
+- NLTK  
+- Streamlit  
+- Joblib  
 
-Evaluate performance using F1 Score
+## How to Run Locally
 
-Save trained model and vectorizer using Joblib
+Clone the repository:
 
-Build a Streamlit web interface for real-time predictions
-
-🧠 Model & Techniques
-
-Text Cleaning with Regular Expressions and NLTK
-
-Feature Extraction: TF-IDF
-
-Machine Learning Model: Logistic Regression
-
-Evaluation Metric: F1 Score
-
-🛠 Tech Stack
-
-Python
-
-Pandas, NumPy
-
-Scikit-learn
-
-NLTK
-
-Streamlit
-
-Joblib
-
-🚀 How to Run Locally
-1️⃣ Clone the repository
-git clone <your-repo-url>
+git clone <your-repo-url>  
 cd <your-project-folder>
 
-2️⃣ Create virtual environment
+Create virtual environment:
+
 python -m venv venv
 
+Activate environment:
 
-Activate:
+Windows:  
+venv\Scripts\activate  
 
-Windows
+Linux / Mac:  
+source venv/bin/activate  
 
-venv\Scripts\activate
+Install dependencies:
 
-
-Linux / Mac
-
-source venv/bin/activate
-
-3️⃣ Install dependencies
 pip install pandas numpy scikit-learn nltk streamlit joblib
 
-4️⃣ Run the application
-streamlit run hello.py
+Run the application:
 
+streamlit run hello.py
 
 Open in browser:
 
 http://3.95.27.57:8501
 
-🌐 Deployment
+## Deployment
 
-The application can be deployed on cloud platforms such as AWS EC2.
+The application can be deployed on AWS EC2.
+
 Steps include:
 
-Launch Ubuntu EC2 instance
-
-Install Python and dependencies
-
-Upload project files
-
-Open port 8501 in Security Group
-
-Run Streamlit with:
+- Launch Ubuntu EC2 instance  
+- Install Python and required dependencies  
+- Upload project files  
+- Open port 8501 in the Security Group  
+- Run Streamlit using:
 
 streamlit run hello.py --server.port 8501 --server.address 0.0.0.0
 
-✅ Features
+## Features
 
-Automatic dataset column detection
+- Automatic dataset column detection  
+- Real-time sentiment prediction  
+- Clean Streamlit-based web interface  
+- F1-score based evaluation  
+- Model persistence using Joblib  
 
-Real-time sentiment prediction
+## Future Enhancements
 
-Clean web UI using Streamlit
+- Pain-point extraction from negative reviews  
+- WordCloud visualization  
+- BERT-based sentiment analysis  
+- Database integration  
+- Auto-start on server reboot  
 
-F1-score based evaluation
-
-Model persistence with Joblib
-
-📈 Future Enhancements
-
-Pain-point extraction from negative reviews
-
-WordCloud visualization
-
-BERT-based sentiment model
-
-Database integration
-
-Auto-start on server reboot
-
-👤 Author
+## Author
 
 Developed by Siva Prasad
